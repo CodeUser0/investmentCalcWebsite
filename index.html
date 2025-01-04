@@ -8,7 +8,8 @@
 </head>
 <body>
     <main>
-        <h1>Unlock Your Financial Future</h1>
+        <h1>Investment Calculator</h1>
+       <p>This calculator takes into the account the averaged inflation rate in the UK from 1989 until 2024, which is 2.82%.</p>
         <div class="calculator">
             <div class="input-group">
                 <label for="initial">Initial Investment:</label>
@@ -20,13 +21,17 @@
             </div>
             <div class="input-group">
                 <label for="rate">Annual Growth/Interest Rate (%):</label>
-                <input type="number" id="rate" value="5">
+                <input type="number" id="rate" value="7">
+            </div>
+            <div class="input-group">
+                <label for="inflation">Averaged annual inflation rate (%):</label>
+                <input type="number" id="inflation" value="2.82">
             </div>
             <div class="input-group">
                 <label for="years">Number of Years:</label>
                 <input type="number" id="years" value="10">
             </div>
-            <button id="calculate">Calculate</button>
+            <button class="button">Calculate</button>
             <div id="result"></div>
         </div>
     </main>
