@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Unlock Your Financial Future</h1>
+        <div class="calculator">
+            <div class="input-group">
+                <label for="initial">Initial Investment:</label>
+                <input type="number" id="initial" value="1000">
+            </div>
+            <div class="input-group">
+                <label for="contribution">Annual Contribution:</label>
+                <input type="number" id="contribution" value="100">
+            </div>
+            <div class="input-group">
+                <label for="rate">Annual Growth/Interest Rate (%):</label>
+                <input type="number" id="rate" value="5">
+            </div>
+            <div class="input-group">
+                <label for="years">Number of Years:</label>
+                <input type="number" id="years" value="10">
+            </div>
+            <button id="calculate">Calculate</button>
+            <div id="result"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
