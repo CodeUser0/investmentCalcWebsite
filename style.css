@@ -20,6 +20,7 @@ main {
     width: 90%;
 }
 
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 5px;
@@ -149,5 +150,5 @@ button {
 }
 
 .custom-shape-divider-bottom-1736093804 .shape-fill {
-    fill: #333333;
+    fill: #515151FF;
 }
