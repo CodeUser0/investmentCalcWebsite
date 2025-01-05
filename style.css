@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #f0f0f0;
+    background: #f0f0f0; 
     color: #333; 
 }
 
@@ -18,7 +18,6 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     max-width: 600px; 
     width: 90%; 
-}
 
 h1 {
     font-size: 2.5rem;
@@ -45,7 +44,7 @@ label {
 }
 
 input[type="number"] {
-    width: calc(100% - 12px); #
+    width: calc(100% - 12px); 
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 4px;
@@ -54,7 +53,7 @@ input[type="number"] {
 }
 
 button {
-    margin: 10px auto;
+    margin: 10px auto; 
     padding: 15px 30px; 
     border: none;
     outline: none;
@@ -111,14 +110,17 @@ button {
 /* hover */
 .button:hover::before {
   opacity: 1;
+  border-radius: 1000px;
 }
 
 .button:active:after {
   background: transparent;
+  border-radius: 1000px;
 }
 
 .button:active {
   color: #000;
+  border-radius: 1000px;
 }
 
 #result {
