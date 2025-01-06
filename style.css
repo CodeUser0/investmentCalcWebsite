@@ -18,6 +18,8 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 90%;
+    margin-top: 50px; /* Adjust this value to move it down */
+    margin-bottom: 50px; /* Adjust this value to move it up */
 }
 
 
@@ -151,4 +153,14 @@ button {
 
 .custom-shape-divider-bottom-1736093804 .shape-fill {
     fill: #515151FF;
+}
+#balanceChart {
+    margin-top: 20px;
+    max-width: 100%;
+    height: 300px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
