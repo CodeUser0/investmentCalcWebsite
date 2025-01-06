@@ -19,11 +19,43 @@ if (buttons.length > 0) {
             const realRate = (1 + nominalRate) / (1 + inflationRate) - 1;
 
             let futureValue = initial;
+            const balances = [futureValue];  // Store the initial value as the first year balance
             for (let j = 0; j < years; j++) {
                 futureValue = (futureValue + contribution) * (1 + realRate);
+                balances.push(futureValue);  // Add the calculated future value for the year
             }
 
-            document.getElementById('result').textContent = "Approximate end balance: £" + futureValue.toFixed(2);
+            // Update the result text
+            document.getElementById('result').textContent = "Approximate end balance: £" + futureValue.toLocaleString();
+
+            // Create or update the chart with the new data
+            const ctx = document.getElementById('balanceChart').getContext('2d');
+
+            // Check if the chart already exists and destroy it before creating a new one
+            if (window.myChart) {
+                window.myChart.destroy();
+            }
+
+            window.myChart = new Chart(ctx, {
+                type: 'line',  // Changed to 'line' for better investment growth representation
+                data: {
+                    labels: Array.from({ length: years + 1 }, (_, i) => `Year ${i}`),
+                    datasets: [{
+                        label: 'Investment Value (£)',
+                        data: balances,  // Use the balances array for the chart data
+                        borderWidth: 1,
+                        borderColor: 'grey',
+                        tension: 0.4,  // Smooth the line curve
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
         });
     }
 
