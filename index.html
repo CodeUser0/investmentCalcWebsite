@@ -18,28 +18,33 @@
     </div>
     <main>
         <h1>Investment Calculator</h1>
-       <p>This calculator takes into the account the averaged inflation rate in the UK from 1989 until 2024, which is 2.82%.</p>
+       <p>This calculator takes into the account the averaged inflation rate in the UK from 1989 until 2024 in every value, which is 2.82%. If your calculation requires no inflation in the values, set the inflation to 0%.</p>
         <div class="calculator">
             <div class="input-group">
                 <label for="initial">Initial Investment:</label>
-                <input type="number" id="initial" value="1000">
+                <input type="number" id="initial" value="1000" placeholder="Enter intial investment">
             </div>
             <div class="input-group">
                 <label for="contribution">Annual Contribution:</label>
-                <input type="number" id="contribution" value="100">
+                <input type="number" id="contribution" value="100" placeholder="Enter annual contribution">
             </div>
             <div class="input-group">
                 <label for="rate">Annual Growth/Interest Rate (%):</label>
-                <input type="number" id="rate" value="7">
+                <input type="number" id="rate" value="7" placeholder="Enter growth rate">
             </div>
             <div class="input-group">
                 <label for="inflation">Averaged annual inflation rate (%):</label>
-                <input type="number" id="inflation" value="2.82">
+                <input type="number" id="inflation" value="2.82" placeholder="Enter annual inflation rate">
             </div>
             <div class="input-group">
                 <label for="years">Number of Years:</label>
-                <input type="number" id="years" value="10">
+                <input type="number" id="years" value="10" placeholder="Enter number of years">
             </div>
+            <div class="input-group">
+              <label for="expenses">Annual Expenses (£):</label>
+              <input type="number" id="expenses" value="0" placeholder="Enter annual expenses">
+            </div>
+
             <button class="button">Calculate</button>
                 <div id="result"></div>
                 <canvas id="balanceChart" width="400" height="200"></canvas>
