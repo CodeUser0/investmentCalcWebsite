@@ -7,10 +7,11 @@ if (buttons.length > 0) {
             const contribution = parseFloat(document.getElementById('contribution').value);
             const nominalRate = parseFloat(document.getElementById('rate').value) / 100;
             const inflationRate = parseFloat(document.getElementById('inflation').value) / 100; // Get inflation from input
+            let expenses = parseFloat(document.getElementById('expenses').value); // Get expenses from input
             const years = parseInt(document.getElementById('years').value);
 
-            if (isNaN(initial) || isNaN(contribution) || isNaN(nominalRate) || isNaN(inflationRate) || isNaN(years) ||
-                initial < 0 || contribution < 0 || nominalRate < 0 || inflationRate < 0 || years < 0) {
+            if (isNaN(initial) || isNaN(contribution) || isNaN(nominalRate) || isNaN(inflationRate) || isNaN(expenses) || isNaN(years) ||
+                initial < 0 || contribution < 0 || nominalRate < 0 || inflationRate < 0 || expenses < 0 || years < 0) {
                 alert("Please enter valid positive numbers for all fields.");
                 return;
             }
@@ -21,7 +22,8 @@ if (buttons.length > 0) {
             let futureValue = initial;
             const balances = [futureValue];  // Store the initial value as the first year balance
             for (let j = 0; j < years; j++) {
-                futureValue = (futureValue + contribution) * (1 + realRate);
+                expenses *= (1 + inflationRate); // Increase expenses by the inflation rate
+                futureValue = (futureValue + contribution - expenses) * (1 + realRate);
                 balances.push(futureValue);  // Add the calculated future value for the year
             }
 
